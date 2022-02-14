@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Container, Navbar, Nav, Dropdown, DropdownButton } from 'react-bootstrap'
+import { Container, Navbar, Nav, Dropdown, DropdownButton, ButtonGroup } from 'react-bootstrap'
 
 // Layout
 
@@ -46,6 +46,15 @@ import Ratio from './components/utilities/Ratio'
 import RestartUI from './components/utilities/RestartUI'
 import Transitions from './components/utilities/Transitions'
 
+import Background from './components/utilities/Background'
+import Borders from './components/utilities/Borders'
+import Colors from './components/utilities/Colors'
+import Display from './components/utilities/Display'
+import Position from './components/utilities/Position'
+import Sizing from './components/utilities/Sizing'
+import Spacing from './components/utilities/Spacing'
+import Text from './components/utilities/Text'
+
 
 
 function App() {
@@ -57,51 +66,68 @@ function App() {
         <Container>
           <Navbar.Brand>Bootstrap Practice</Navbar.Brand>
           <Nav>
-            <Dropdown className="my-3">
-              <DropdownButton id="dropdown-basic-button" title="Topics" variant="primary" size="lg" align="end">
-                <Dropdown.Header>Layout</Dropdown.Header>
-                <Dropdown.Item href="/grid">Grid</Dropdown.Item>
-                <Dropdown.Item href="/stack">Stack</Dropdown.Item>
+            <ButtonGroup>
+              
+              <Dropdown className="my-3">
+                <DropdownButton id="dropdown-basic-button" title="Layouts" variant="light" size="lg" align="end">
+                  <Dropdown.Item href="/grid">Grid</Dropdown.Item>
+                  <Dropdown.Item href="/stack">Stack</Dropdown.Item>
+                </DropdownButton>
+              </Dropdown>
 
-                <Dropdown.Divider />
+              <Dropdown className="m-3">
+                <DropdownButton id="dropdown-basic-button" title="Components" variant="info" size="lg" align="end">
+                  <Dropdown.Item href="/accordians">Accordians</Dropdown.Item>
+                  <Dropdown.Item href="/alerts">Alerts</Dropdown.Item>
+                  <Dropdown.Item href="/badges">Badges</Dropdown.Item>
+                  <Dropdown.Item href="/breadcrumbs">Bread Crumbs</Dropdown.Item>
+                  <Dropdown.Item href="/btn-groups">BtnGroups</Dropdown.Item>
+                  <Dropdown.Item href="/btns">Btns</Dropdown.Item>
+                  <Dropdown.Item href="/cards">Cards</Dropdown.Item>
+                  <Dropdown.Item href="/carousels">Carousels</Dropdown.Item>
+                  <Dropdown.Item href="/close-btns">Close Btns</Dropdown.Item>
+                  <Dropdown.Item href="/dropdowns">Dropdowns</Dropdown.Item>
+                  <Dropdown.Item href="/figures">Figures</Dropdown.Item>
+                  <Dropdown.Item href="/images">Images</Dropdown.Item>
+                  <Dropdown.Item href="/list-groups">List Groups</Dropdown.Item>
+                  <Dropdown.Item href="/modals">Modals</Dropdown.Item>
+                  <Dropdown.Item href="/navs">Navs</Dropdown.Item>
+                  <Dropdown.Item href="/offcanvases">Offcanvases</Dropdown.Item>
+                  <Dropdown.Item href="/overlays">Overlays</Dropdown.Item>
+                  <Dropdown.Item href="/paginations">Paginations</Dropdown.Item>
+                  <Dropdown.Item href="/placeholders">Placeholders</Dropdown.Item>
+                  <Dropdown.Item href="/popovers">Popovers</Dropdown.Item>
+                  <Dropdown.Item href="/progresses">Progresses</Dropdown.Item>
+                  <Dropdown.Item href="/spinners">Spinners</Dropdown.Item>
+                  <Dropdown.Item href="/tables">Tables</Dropdown.Item>
+                  <Dropdown.Item href="/tabs">Tabs</Dropdown.Item>
+                  <Dropdown.Item href="/toasts">Toasts</Dropdown.Item>
+                  <Dropdown.Item href="/tooltips">Tooltips</Dropdown.Item>
+                </DropdownButton>
+              </Dropdown>
 
-                <Dropdown.Header>Components</Dropdown.Header>
-                <Dropdown.Item href="/accordians">Accordians</Dropdown.Item>
-                <Dropdown.Item href="/alerts">Alerts</Dropdown.Item>
-                <Dropdown.Item href="/badges">Badges</Dropdown.Item>
-                <Dropdown.Item href="/breadcrumbs">Bread Crumbs</Dropdown.Item>
-                <Dropdown.Item href="/btn-groups">BtnGroups</Dropdown.Item>
-                <Dropdown.Item href="/btns">Btns</Dropdown.Item>
-                <Dropdown.Item href="/cards">Cards</Dropdown.Item>
-                <Dropdown.Item href="/carousels">Carousels</Dropdown.Item>
-                <Dropdown.Item href="/close-btns">Close Btns</Dropdown.Item>
-                <Dropdown.Item href="/dropdowns">Dropdowns</Dropdown.Item>
-                <Dropdown.Item href="/figures">Figures</Dropdown.Item>
-                <Dropdown.Item href="/images">Images</Dropdown.Item>
-                <Dropdown.Item href="/list-groups">List Groups</Dropdown.Item>
-                <Dropdown.Item href="/modals">Modals</Dropdown.Item>
-                <Dropdown.Item href="/navs">Navs</Dropdown.Item>
-                <Dropdown.Item href="/offcanvases">Offcanvases</Dropdown.Item>
-                <Dropdown.Item href="/overlays">Overlays</Dropdown.Item>
-                <Dropdown.Item href="/paginations">Paginations</Dropdown.Item>
-                <Dropdown.Item href="/placeholders">Placeholders</Dropdown.Item>
-                <Dropdown.Item href="/popovers">Popovers</Dropdown.Item>
-                <Dropdown.Item href="/progresses">Progresses</Dropdown.Item>
-                <Dropdown.Item href="/spinners">Spinners</Dropdown.Item>
-                <Dropdown.Item href="/tables">Tables</Dropdown.Item>
-                <Dropdown.Item href="/tabs">Tabs</Dropdown.Item>
-                <Dropdown.Item href="/toasts">Toasts</Dropdown.Item>
-                <Dropdown.Item href="/tooltips">Tooltips</Dropdown.Item>
+              <Dropdown className="my-3">
+                <DropdownButton id="dropdown-basic-button" title="Utils" variant="outline-primary" size="lg" align="end">
 
-                <Dropdown.Divider />
+                  <Dropdown.Header>Docs</Dropdown.Header>
+                  <Dropdown.Item href="/ratio">Ratio</Dropdown.Item>
+                  <Dropdown.Item href="/restart-ui">@restart/ui</Dropdown.Item>
+                  <Dropdown.Item href="/transitions">Transitions</Dropdown.Item>
+                  <Dropdown.Divider />
 
-                <Dropdown.Header>Utilities</Dropdown.Header>
-                <Dropdown.Item href="/ratio">Ratio</Dropdown.Item>
-                <Dropdown.Item href="/restart-ui">@restart/ui</Dropdown.Item>
-                <Dropdown.Item href="/transitions">Transitions</Dropdown.Item>
-
-              </DropdownButton>
-            </Dropdown>
+                  <Dropdown.Header>Unofficial Docs</Dropdown.Header>
+                  <Dropdown.Item href="/background">Background</Dropdown.Item>
+                  <Dropdown.Item href="/borders">Borders</Dropdown.Item>
+                  <Dropdown.Item href="/colors">Colors</Dropdown.Item>
+                  <Dropdown.Item href="/display">Display</Dropdown.Item>
+                  <Dropdown.Item href="/position">Position</Dropdown.Item>
+                  <Dropdown.Item href="/sizing">Sizing</Dropdown.Item>
+                  <Dropdown.Item href="/spacing">Spacing</Dropdown.Item>
+                  <Dropdown.Item href="/text">Text</Dropdown.Item>
+                </DropdownButton>
+              </Dropdown>
+              
+            </ButtonGroup>
           </Nav>
         </Container>
       </Navbar>
@@ -113,6 +139,7 @@ function App() {
         <Route path="/accordians" element={<Accordians />} />
         <Route path="/alerts" element={<Alerts />} />
         <Route path="/badges" element={<Badges />} />
+        <Route path="/background" element={<Background />} />
         <Route path="/breadcrumbs" element={<Breadcrumbs />} />
         <Route path="/btn-groups" element={<BtnGroups />} />
         <Route path="/btns" element={<Btns />} />
@@ -140,6 +167,15 @@ function App() {
         <Route path="/ratio" element={<Ratio />} />
         <Route path="/restart-ui" element={<RestartUI />} />
         <Route path="/transitions" element={<Transitions />} />
+
+        <Route path="/background" element={<Background />} />
+        <Route path="/borders" element={<Borders />} />
+        <Route path="/colors" element={<Colors />} />
+        <Route path="/display" element={<Display />} />
+        <Route path="/position" element={<Position />} />
+        <Route path="/sizing" element={<Sizing />} />
+        <Route path="/spacing" element={<Spacing />} />
+        <Route path="/text" element={<Text />} />
       </Routes>
     </Container>
   );

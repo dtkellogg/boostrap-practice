@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Button, Offcanvas } from 'react-bootstrap'
 
 export default function Offcanvaseses() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   return (
     <div>
-      <h1 className="mx-auto" style={{"width": "250px"}}>Offcanvaseses</h1>
+      <h1 className="mx-auto mt-2" style={{"width": "min-content"}}>Offcanvas</h1>
+
+      <Button variant="primary" onClick={handleShow}>
+        Launch
+      </Button>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas>
       
     </div>
   )

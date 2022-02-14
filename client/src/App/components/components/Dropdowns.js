@@ -5,7 +5,7 @@ import { Dropdown, DropdownButton, SplitButton } from 'react-bootstrap'
 export default function Dropdowns() {
   return (
     <div>
-      <h1 className="mx-auto" style={{"height": "200px"}}>Dropdowns</h1>
+      <h1 className="mx-auto mt-2" style={{"height": "200px"}}>Dropdowns</h1>
       <Dropdown>
         <Dropdown.Toggle variant="success">Dropdown Button</Dropdown.Toggle>
         <Dropdown.Menu variant="dark">

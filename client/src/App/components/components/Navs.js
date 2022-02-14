@@ -5,7 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 export default function Navs() {
   return (
     <div className="h-100" >
-      <h1 className="mx-auto" style={{"width": "100px"}}>Navs</h1>
+      <h1 className="mx-auto mt-2" style={{"width": "100px"}}>Navs</h1>
       <Navbar className="" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>Toshi's Navs</Navbar.Brand>

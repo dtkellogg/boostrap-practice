@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 export default function Btns() {
   return (
     <Container fluid className="h-100">
-      <h1 className="mx-auto mt-5" style={{"width": "250px"}}>Predefined Btns</h1>  {/* mx-auto needs width specified */}
+      <h1 className="mx-auto mt-5" style={{"width": "min-content"}}>Predefined Btns</h1>  {/* mx-auto needs width specified */}
       <Row className="mx-3">
         <Button className="btn" size="lg" href="#">btn</Button>
       </Row>

@@ -5,7 +5,7 @@ import { Spinner } from 'react-bootstrap'
 export default function Spinners() {
   return (
     <div className="h-100" >
-      <h1 className="mx-auto" style={{"width": "100px"}}>Spinners</h1>
+      <h1 className="mx-auto mt-2" style={{"width": "100px"}}>Spinners</h1>
       <div className="h-100 mt-5">
         <Spinner animation="border" variant="primary" />
         <Spinner animation="border" variant="secondary" />
